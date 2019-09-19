@@ -10,11 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var celsiusLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
     }
 
-
+    @IBAction func fahrenheitFieldChanged(_ sender: UITextField) {
+        print("text=\(sender.text)")
+    }
+    
 }
 
