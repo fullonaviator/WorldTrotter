@@ -45,13 +45,14 @@
                                 <rect key="frame" x="149.66666666666666" y="52" width="114.66666666666666" height="84"/>
                                 <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="alert"/>
                                 <connections>
                                     <action selector="fahrenheitFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="AGE-Pw-04T"/>
                                 </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="lrv-hV-9KD" firstAttribute="top" secondItem="rWc-lt-qx5" secondAttribute="bottom" constant="45" id="3hU-Tp-hSG"/>
                             <constraint firstItem="lEF-Gh-89K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="5j5-RQ-nic"/>
@@ -65,12 +66,21 @@
                             <constraint firstItem="e7E-OU-OWh" firstAttribute="centerX" secondItem="rWc-lt-qx5" secondAttribute="centerX" id="x6J-ou-Eby"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BIb-Jl-Qup" appends="YES" id="DHP-Ym-zfT"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="celsiusLabel" destination="lrv-hV-9KD" id="JLd-Zw-M50"/>
+                        <outlet property="fahrenheitTextField" destination="lEF-Gh-89K" id="eNE-n0-DT3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="BIb-Jl-Qup">
+                    <connections>
+                        <action selector="tapDetected:" destination="BYZ-38-t0r" id="tDf-sj-Wa4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-65.217391304347828" y="115.84821428571428"/>
         </scene>
