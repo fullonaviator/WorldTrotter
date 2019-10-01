@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet weak var fahrenheitTextField: UITextField!
@@ -42,6 +42,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fahrenheitTextField.delegate = self
        
     }
 
@@ -55,6 +57,15 @@ class ViewController: UIViewController {
     
     @IBAction func tapDetected(_ sender: UITapGestureRecognizer) {
         fahrenheitTextField.resignFirstResponder()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.text?.contains(".") == true &&
+            string.contains(".") {
+            return false
+        } else {
+            return true
+        }
     }
 
 }
