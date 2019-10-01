@@ -42,9 +42,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print ("Convert ViewDidLoad")
         
         fahrenheitTextField.delegate = self
        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print ("Convert ViewDidAppear")
     }
 
     @IBAction func fahrenheitFieldChanged(_ sender: UITextField) {
