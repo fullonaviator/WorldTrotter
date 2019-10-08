@@ -16,6 +16,7 @@
 		D898B83223310B2A00BF3BF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D898B83023310B2A00BF3BF9 /* LaunchScreen.storyboard */; };
 		D898B83D23310B2A00BF3BF9 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898B83C23310B2A00BF3BF9 /* WorldTrotterTests.swift */; };
 		D898B84823310B2A00BF3BF9 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898B84723310B2A00BF3BF9 /* WorldTrotterUITests.swift */; };
+		D8D750D1234CC37B0084D4AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8D750D3234CC37B0084D4AE /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,10 @@
 		D898B84323310B2A00BF3BF9 /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D898B84723310B2A00BF3BF9 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		D898B84923310B2A00BF3BF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8D750CD234CBF480084D4AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		D8D750CE234CBF9D0084D4AE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		D8D750D2234CC37B0084D4AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D8D750D4234CC3890084D4AE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +116,7 @@
 		D898B82623310B2500BF3BF9 /* WorldTrotter */ = {
 			isa = PBXGroup;
 			children = (
+				D8D750D3234CC37B0084D4AE /* Localizable.strings */,
 				D898B82723310B2500BF3BF9 /* AppDelegate.swift */,
 				D898B82923310B2500BF3BF9 /* ViewController.swift */,
 				D898B82B23310B2500BF3BF9 /* Main.storyboard */,
@@ -226,6 +232,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = D898B81B23310B2500BF3BF9;
 			productRefGroup = D898B82523310B2500BF3BF9 /* Products */;
@@ -245,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D898B83223310B2A00BF3BF9 /* LaunchScreen.storyboard in Resources */,
+				D8D750D1234CC37B0084D4AE /* Localizable.strings in Resources */,
 				D898B82F23310B2A00BF3BF9 /* Assets.xcassets in Resources */,
 				D898B82D23310B2500BF3BF9 /* Main.storyboard in Resources */,
 			);
@@ -313,6 +321,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				D898B82C23310B2500BF3BF9 /* Base */,
+				D8D750CD234CBF480084D4AE /* en */,
+				D8D750CE234CBF9D0084D4AE /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -325,6 +335,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		D8D750D3234CC37B0084D4AE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8D750D2234CC37B0084D4AE /* en */,
+				D8D750D4234CC3890084D4AE /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -332,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -393,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

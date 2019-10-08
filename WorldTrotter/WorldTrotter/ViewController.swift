@@ -54,8 +54,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func fahrenheitFieldChanged(_ sender: UITextField) {
-        if let text = sender.text, !text.isEmpty, let value = Double(text){
-            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+        if let text = sender.text, !text.isEmpty, let value = formatter.number(from: text){
+            fahrenheitValue = Measurement(value: value.doubleValue, unit: .fahrenheit)
         } else {
             celsiusLabel.text = "???"
         }
@@ -66,8 +66,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField.text?.contains(".") == true &&
-            string.contains(".") {
+        let locale = Locale.current
+        let dSep = locale.decimalSeparator ?? "."
+        if textField.text?.contains(dSep) == true &&
+            string.contains(dSep) {
             return false
         } else {
             return true
